@@ -2,10 +2,10 @@ import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
 
-granularity_0 = 8
-granularity_1 = 8
+granularity_0 = 32
+granularity_1 = 32
 granularity_2 = 32
-granularity_3 = 16
+granularity_3 = 32
 
 EPSILON_INIT = 1
 EPSILON_DECAY = 0.9994
@@ -37,7 +37,7 @@ def discretize_state(state):
     state[3] = int(((state[3] + 4.0) / (8.0)) * granularity_3 )
     # print(state)
     return (state)
-n = 40000
+n = 30000
 mean_width = 100
 reward_list = np.zeros(n+1)
 average_reward_list = np.zeros(n+1)
